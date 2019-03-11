@@ -1,0 +1,51 @@
+
+<ion-header>
+      <div class="header_ad">
+        <div class="user_notice" style="justify-content: left">
+          <ion-icon name="volume-down" style="margin-right:5px" large></ion-icon>
+          ****9195通过信用卡取现500.0元</div>
+        <div class="notice_right" (click)="ToMinePage()">
+          <img src="assets/imgs/account.png" alt="">
+        </div>
+      </div>
+</ion-header>
+
+
+<ion-content no-padding>
+  <div class="lgbtn">
+    <button (click)="ToTakeCash()">刷卡收款</button>       
+  </div>
+  <!--九宫格功能模块-->
+  <ion-row>
+    <ion-col col-4 class="func-content" *ngFor="let item of FuncItems" (click)="FuncItemClick(item)">
+      <div>
+        <div class="img"><img src="{{item.src}}"></div>
+        <div class="title">{{item.name}}</div>
+      </div>
+    </ion-col>
+  </ion-row>
+  <div class="card">
+    <div class="cardtitle">新手大礼包</div>
+    <div class="cardcontent">
+      <div class="content"></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="cardtitle">VIP专区</div>
+    <div class="cardcontent">
+      <div class="content"></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="cardtitle">精选信用卡</div>
+    <div class="cardcontent">
+      <ion-row>
+          <ion-col col-4 class="func-content" *ngFor="let item of CardRecomData" (click)="FuncItemClick(item)">
+            <div class="img"><img src="{{item.src}}"></div>
+            <div class="title">{{item.name}}</div>
+            <div class="descr">{{item.describe}}</div>
+          </ion-col>
+      </ion-row>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,41 @@
+<!--
+  Generated template for the TakecashnotePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>收款记录</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding>
+  <ion-list *ngFor = "let item of listDatas">
+    <ion-list-header class="clearfix">
+      {{item.date}} <span class="fr">累计收款：{{item.sum /100}}元</span>
+    </ion-list-header>
+    <ion-item *ngFor = "let data of item.data" class="list_item">
+      <ion-row [ngSwitch]="data.type"> 
+        <ion-col col-1.5  class="card_icon">
+          <ion-icon name="card" *ngSwitchCase="'card'" item-start color="danger"></ion-icon>
+          <ion-icon name="qr-scanner" *ngSwitchCase="'alipay'" item-start color="danger"></ion-icon>
+          <ion-icon name="chatbubbles-outline" *ngSwitchCase="'wechat'" item-start color="danger"></ion-icon>
+        </ion-col>
+        <ion-col col-7>
+          <h2 class="clearfix title" *ngSwitchCase="'card'">信用卡取现</h2>
+          <h2 class="clearfix title" *ngSwitchCase="'alipay'">支付宝取现</h2>
+          <h2 class="clearfix title" *ngSwitchCase="'wechat'">微信取现</h2>
+          <p class="fix describe">{{data.time}}</p>
+        </ion-col>
+        <ion-col col-3 class="amount">
+          ￥{{data.amount / 100}}
+        </ion-col>
+      </ion-row>
+      <div class="finish_flag" [ngClass]="{show: data.status == 1}">
+        已成功
+      </div>
+
+    </ion-item>
+  </ion-list>
+</ion-content>

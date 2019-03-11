@@ -1,0 +1,27 @@
+<!--
+  Generated template for the ModalcontentPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<div class="bkbox"></div>
+<div class="box">
+  <div class="title">
+    <p class="title_text" (click)="toAddNewCard(bank_type)"><ion-icon name="ios-add-circle-outline"></ion-icon> 添加新卡</p>
+  </div>
+  <div class="btn_list">
+    <div class="list_btn" *ngFor="let bank of banks; let i= index">
+      <img src="assets/imgs/account.png" class="bank_logo" >
+      <span class="bank_title">
+        {{bank.show_name}}
+      </span>
+      <img src="assets/imgs/check_box.png" class="check_box" *ngIf= "banks[i].check" (click)="choseBank(i)">
+      <img src="assets/imgs/check_nor.png" class="check_box" *ngIf= "!banks[i].check" (click)="choseBank(i)">
+    </div>
+  </div>
+  <div class="close_button">
+    <p (click)="dismiss()" class="close_text">取消</p>
+  </div>
+</div>
+

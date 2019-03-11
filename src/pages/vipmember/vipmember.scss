@@ -1,0 +1,168 @@
+page-vipmember {
+    ion-content{
+        .top{
+            color: white;
+            text-align: center;
+            padding: 5% 3% 2% 3% ;
+            position: relative;
+            font-size: 1.7rem;
+            span{
+                position: absolute;
+                right: 5%;
+                font-size: 1.5rem;
+            }
+        }
+        //��ѡ
+        .radioouter_row{
+            display: flex;
+            align-items: center;
+            .radioouter{
+                width: 16px;
+                height: 16px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid  rgb(209, 209, 209);
+            }
+            .changebg{
+                background:  color($colors, primary);
+                border: none;
+            }
+            .changepaybg{
+                background:  #2084D3;
+                border: none;
+            }
+            .removebg{
+                background:  rgb(255, 255, 255);
+                border: 1px solid  rgb(209, 209, 209);
+            }
+            .pack{
+                background:  #dad9d9;
+                .radio-ios .radio-checked .radio-inner {
+                    left: 6px;
+                    top: 3px;
+                    border-color: #dad9d9;
+                }
+            }
+        }
+        .radio-ios .radio-checked .radio-inner {
+            left: 6px;
+            top: 3px;
+            border-color: #ffffff;
+        }
+
+        .top_text{
+            padding-top: 16%;
+            height: 14rem;
+            display: flex;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            .member_detail{
+                text-align: center;
+                .member_tips{
+                    border:1px solid #DC9932;
+                    color: #DC9932;
+                    line-height: 32px;
+                   // padding: 4.5% 8%;
+                    padding: 0 25px;
+                    text-align: center;
+                    white-space: nowrap;
+                    margin-top: 10px;
+                    border-radius: 35px;
+                }
+            }
+        }
+        .chose_package{
+            background: rgb(240, 240, 240);
+            padding: 1%;
+            color:#868788;
+        }
+        .scroll-content{
+            background: rgb(248, 248, 248);
+        }
+        ion-row{
+            background: white;
+            padding:3%;
+            span{
+                color:rgb(131, 131, 131);
+            }
+        }
+            .package_group{
+                border-radius: 8px;
+                font-size: 1.4rem;
+                border-bottom: 1px solid rgb(240, 240, 240);
+                .text_title_tip{
+                    color:#6F6F6F;
+                    span{
+                        // color: color($colors, primary);
+                        color:#FF5950;
+                    }
+                }
+                .package_text{
+                    width: 100%;
+                    .text_title{
+                        color:rgb(39, 39, 39);
+                        font-size: 1.4rem;
+                        font-weight: bold;
+                    }
+                }
+                .package_price{
+                    // color: color($colors, primary);
+                    color:#FF5950;
+                    white-space: nowrap;
+                    font-size: 2rem;
+                }
+                .package_price_detail{
+                    color:#6F6F6F;
+                }
+            }
+        .pay{
+            margin-top: 5%;
+            padding: 3.5% 3%;
+            border: 1px solid rgb(240, 240, 240);
+        }
+        .paybottom{
+            padding: 3.5% 3%;
+            border-bottom: 1px solid rgb(240, 240, 240);
+            .payitem{
+                display: flex;
+                align-items: center;
+                div{
+                    display: flex;
+                    align-items: center;
+                    margin-left: 10px;
+                }
+            }
+        }
+       
+    }
+    ion-footer{
+        .footer{
+            border-top: 1px solid rgb(240, 240, 240);
+            height: 4.7rem;
+            display: flex;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            span{
+                font-size: 1.6rem;
+                color: rgb(41, 41, 41);
+            }
+            div{
+                padding: 3% 3% 3% 4%;
+            }
+            .pay{
+                width:35%;
+                background-image:-webkit-linear-gradient(90deg, color($colors, light-primary), color($colors, primary));
+                background-image:linear-gradient(90deg,color($colors, light-primary),color($colors, primary));
+                color: white;
+                height: 4.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+    
+}

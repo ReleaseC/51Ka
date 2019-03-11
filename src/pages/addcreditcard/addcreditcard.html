@@ -1,0 +1,53 @@
+<!--
+  Generated template for the AddcreditcardPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>添加信用卡</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding>
+  <p class="remindword">
+    请绑定持卡人本人的具有银联标识信用卡，此信用卡用于付款刷卡
+  </p>
+  <ion-list>
+    <ion-item>
+      <ion-label fixed>持卡人</ion-label>
+      <ion-input type="text" readonly [(ngModel)]="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>身份证</ion-label>
+      <ion-input type="text" readonly [(ngModel)]="idcard"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-label fixed>卡号</ion-label>
+      <ion-input type="number" placeholder="输入您的卡号" [(ngModel)]="card_num"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>预留手机号</ion-label>
+      <ion-input type="number" placeholder="请输入银行预留手机号" [(ngModel)]="mobile" (input)="getMobile()"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>验证码</ion-label>
+      <ion-input type="text" placeholder="请输入验证码" [(ngModel)]="verify_code" (input)="isInput()"></ion-input>
+      <button ion-button outline item-end icon-right (click)="sendCode()" [disabled]="!allow_getcode"  *ngIf="send_code == 0; else countDown">
+          获取验证码
+      </button>
+
+      <ng-template #countDown>
+        <button ion-button outline item-end style="width:65px">
+          {{times}}s
+        </button>
+      </ng-template>
+    </ion-item>
+  </ion-list>
+  <div class="save_btn">
+    <button ion-button full round [ngClass]="{add_bk: is_input}" [disabled]="!is_input" (click)="save()">保存</button>
+  </div>
+</ion-content>

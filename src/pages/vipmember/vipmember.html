@@ -1,0 +1,65 @@
+
+<ion-content no-padding>
+  <div class="top" [ngStyle]="TopBgStyle()">
+      VIP会员<span>购买记录</span>
+  </div>
+  <ion-row class="top_text" [ngStyle]="TopBgStyle()">
+    <div class="member_detail">
+        <div *ngIf = "member.package_id == 1 || member.package_id == 2 || member.package_id == 3">您已是{{ member.package_name }}</div>
+        <div *ngIf = "member.package_id == 1 || member.package_id == 2 || member.package_id == 3">享{{ member.package_rate }}费率</div>
+        <div *ngIf = "member.package_id == 1 || member.package_id == 2">剩余套餐时间：{{ member.package_time }}天</div>
+        <div *ngIf = "member.package_id == 3">永久有效</div>
+        <div *ngIf = "member.package_id == 4">您还不是会员</div>
+        <div *ngIf = "member.package_id == 4" class="member_tips">购买会员，享超低费率</div>
+        <div *ngIf = "member.package_id == 5">您的会员已经过期</div>
+        <div *ngIf = "member.package_id == 5" class="member_tips">续费，享超低费率</div>
+    </div>
+  </ion-row>
+  <div *ngIf = "member.package_id != 3">
+    <ion-row class="chose_package">
+      <ion-col col-10>选择VIP套餐</ion-col>
+    </ion-row>
+    <div radio-group>
+        <ion-row class="package_text package_group" *ngFor = "let item of Packagelist" >
+          <ion-col col-7>  
+              <img [src] ="GetImgSrc(item.name)" width="50px" height="50px" style="float:left;margin-right:10px">
+              <div class="text_title" style="margin-top:5px">{{item.name}}</div>
+              <div class="text_title_tip">费率低至<span>{{item.rate}}%</span></div>
+            </ion-col>
+            <ion-col col-4 style="text-align:right">  
+                <div class="package_price">￥{{item.price}}</div>
+                <div class="package_price_detail">{{GetDays(item.days)}}</div>
+            </ion-col>
+            <ion-col col-1 class="radioouter_row">
+              <div class="radioouter" [ngClass] = "{ 'changebg' : item.checked == true ,'removebg' : item.checked == false, 'pack' : item.pack_flag == false }">
+                  <ion-radio [value]="item" (click)= "ToChange(item,'Package')" ></ion-radio>
+              </div>
+            </ion-col>
+        </ion-row>
+    </div>
+    <ion-row class="pay" style="color:#888888;padding:2%">
+      选择支付方式
+    </ion-row>
+    <div radio-group>
+      <ion-row class="paybottom" *ngFor = "let payitem of Paylist">
+        <ion-col col-11 class="payitem">
+            <img [src]="payitem.src">
+            <div>
+                {{payitem.type}}支付
+            </div>
+        </ion-col>
+        <ion-col col-1 class="radioouter_row" >
+          <div class="radioouter" [ngClass] = "{ 'changepaybg' : payitem.checked == true ,'removebg' : payitem.checked == false }">
+                <ion-radio [value]="payitem.value" (click)= "ToChange(payitem,'Pay')"></ion-radio>
+            </div>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+</ion-content>
+<ion-footer >
+  <ion-row class="footer" *ngIf = "member.package_id != 3">
+    <div style="width:65%;color:#888888">总计: <span> {{sumnumber}}元</span></div>
+    <div class="pay" (click) = "ToPay()">去支付</div>
+  </ion-row>
+</ion-footer>

@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+        <button ion-button (click)="dismiss()">取消</button>
+    </ion-buttons>
+    <ion-title>提交必要材料</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding>
+  <ion-row>
+    <ion-col col-4>
+      <div class="img_box" [ngClass]="{actived: id_approve}">
+        <ion-icon name="calendar"></ion-icon>
+      </div>
+      <p>身份认证</p>
+    </ion-col>
+    <ion-col col-4 class="line-box">
+      <div [ngClass]="{actived: id_approve}"></div>
+    </ion-col>
+    <ion-col col-4>
+      <div class="img_box" [ngClass]="{actived: bind_card}">
+        <ion-icon name="card"></ion-icon>
+      </div>
+      <p>绑定储蓄卡</p>
+    </ion-col>
+  </ion-row>
+  <ion-item-group>
+    <button ion-item (click)="toIdApprove()">
+      <ion-icon name="calendar" item-start color="danger"></ion-icon>
+      <ion-label>
+        <h3>身份认证</h3>
+        <p>防范身份信息被冒用，确保资金安全</p>
+      </ion-label>
+      <ion-note item-end *ngIf="id_approve" class="red_font">已完成</ion-note>
+      <ion-note item-end *ngIf="!id_approve">未完成</ion-note>
+    </button>
+
+    <button ion-item (click)="toCardBind()">
+      <ion-icon name="card" item-start color="danger"></ion-icon>
+      <ion-label>
+        <h3>绑定到账储蓄卡</h3>
+        <p>所有款项，均进入到此储蓄卡</p>
+      </ion-label>
+      <ion-note item-end *ngIf="bind_card" class="red_font">已完成</ion-note>
+      <ion-note item-end *ngIf="!bind_card">未完成</ion-note>
+    </button>
+  </ion-item-group>
+  
+</ion-content>

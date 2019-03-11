@@ -1,0 +1,121 @@
+page-home {
+    ion-header{
+        background: #fff;
+        color:#000;
+        height: 44px;
+        border-bottom: 1px solid rgb(240, 240, 240);
+        font-size:1rem;
+        padding:0 4% 0 2%;
+        display: flex;
+        .header_ad{
+            width:100%;
+        }
+        align-items: center;
+        ion-icon{
+            color:#797979;
+        }
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        ion-row{
+            clear: both;
+            padding: 2% 0;
+            text-align: center;
+            ion-col{
+                .topicon{
+                    font-size: 6rem;
+                }
+               
+            }
+        }
+        .user_notice{
+            background: #fff;
+            border-radius: 3px;
+            text-align: left;
+            float: left;
+            width: 90%;
+            padding: 1%;
+            ion-icon{
+                font-size:3rem;
+            }
+        }
+        .notice_right{
+            padding: 0;
+            margin-left: 10px;
+            float: left;
+            img{
+                width:1.9rem;
+            }
+        }
+       
+    }
+    ion-content{
+        
+        .scroll-content{
+            background: rgb(248, 248, 248);
+        }
+        .lgbtn{
+            background:#fff;
+            border-bottom: 1px solid rgb(240, 240, 240);
+            text-align: center;
+            padding:1.73rem 0;
+            button{
+                width:83%;
+                height:4.6rem;
+                border-radius:2.3rem;
+                background:linear-gradient(to right, color($colors, light-primary), color($colors, primary));
+                color:#fff;
+                font-size: 1.6rem;
+            }
+        }
+       
+        ion-row{
+            background: white;
+            padding-top:3.5%;
+            .func-content{
+                text-align: center;
+                img{
+                    width:3.47rem;
+                }
+                .title{
+                   margin:.5rem 0 .3rem;
+                   color:#333;
+                   font-size: 1.04rem;
+                }
+                .descr{
+                    margin-bottom:0.5rem;
+                    color:#797979;
+                    font-size:.92rem;
+                }
+            }
+        }
+
+        .card{
+            margin: 3% 0;
+            background: white;
+            ion-row{
+                margin-top: 3%;
+                padding-top: 0;
+            }
+            .cardtitle{
+                color: #797979;
+                text-align: left;
+                padding: 3%;
+                font-size: 1.4rem;
+            }
+            .cardcontent{
+                background:#fff;
+                overflow: hidden;
+                .content{
+                    margin:0 .58rem .81rem;
+                    height:8.1rem;
+                    background: linear-gradient(to right, #87e0fd, #3fc4ff);
+                    border-radius: .29rem;
+                }
+            }
+        }
+        
+    }
+}

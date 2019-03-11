@@ -1,0 +1,29 @@
+<ion-content no-padding>
+
+  <ion-row class="top">
+      <ion-col>登录</ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col style="padding:16% 10%">
+      <img src="assets/icon/delete/logo.PNG" width="75px">
+    </ion-col>
+  </ion-row>
+
+  <div class="inputouter">
+    <ion-input type="text" placeholder="请输入手机号" [(ngModel)]="phoneNum" maxlength="11"></ion-input>
+  </div>
+
+  <div class="inputouter">
+    <ion-input type="password" placeholder="请输入密码" [(ngModel)]="password" maxlength="22"></ion-input>
+  </div>
+
+  <div class="lgbtn">
+    <button (click)="Login()">登录</button>       
+  </div>
+
+  <p class ="forgetpass" (click)="ToFindPassword()">
+    忘记密码？
+  </p>
+
+</ion-content>

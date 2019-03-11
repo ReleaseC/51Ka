@@ -1,0 +1,34 @@
+<!--
+  Generated template for the ReturncashnotePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>返现账户</ion-title>
+  </ion-navbar>
+  <ion-toolbar>
+    <p class="horcenter smfont opacfont">返现总额（元）</p>
+    <p class="horcenter mdfont">￥<span class="suplgfont">{{total_amount}}</span></p>
+    <button ion-button clear small class="recashbtn" (click)="openTakeCash()">申请提现</button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content no-padding>
+  <div class="recashtitle">
+   <span class="redblock"></span>
+   <p class="mlfont titname">返现提现记录</p>
+  </div>
+  <ion-list>
+    <ion-item *ngFor = "let data of data_list">
+      <div>
+        <p class="clearfix titlname" [ngSwitch]="data.type">
+          <span *ngSwitchCase="1">存入</span><span *ngSwitchCase="2">提现</span>{{data.amount}}元
+          <span class="fr describe">{{data.time}}</span>
+        </p>
+        <p class="clearfix describe">{{data.remark}}</p>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>

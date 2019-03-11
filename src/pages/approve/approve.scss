@@ -1,0 +1,46 @@
+page-approve {
+    .scroll-content{
+        background: rgb(248, 248, 248);
+    }
+    .inputs{
+        background: #fff;
+        margin-top: 1.2rem;
+    }
+    .list-ios > .item-block:first-child{
+        border: none;
+    }
+    .list-ios > .item-block:last-child{
+        border: none;
+    }
+    ion-label[fixed]{
+        width: 5rem;
+        min-width: 5rem;
+        flex: 0 0 5rem;
+    }
+    .item-ios{
+        font-size: 1.5rem;
+    }
+    .submit_box{
+        padding: 0 1rem;
+        width: 100%;
+        position: absolute;
+        bottom: 5%;
+    }
+    .submit{
+        background: color($colors, primary);
+        border-radius: 4px;
+        &.activated{
+            background: color($colors, primary);
+        }
+    }
+    .button-inner{
+        margin: 0 auto;
+    }
+    button.add_btnbk{
+        background: color($colors, primary);
+    }
+    .button-ios{
+        background: #ccc;
+    }
+}
+

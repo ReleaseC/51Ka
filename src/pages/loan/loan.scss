@@ -1,0 +1,115 @@
+.alert-ios [aria-checked=false] .alert-radio-label{
+    color:rgb(60, 60, 60);
+    background:#fff;
+    text-align: center;
+}
+.alert-ios [aria-checked=true] .alert-radio-label{
+    color:#fff;
+    background:color($colors, primary);
+    text-align: center;
+}
+.alert-ios .alert-radio-icon{
+    display:none;
+}
+.button-inner{
+    width: 80%;
+    height: 15%;
+    margin: 0 auto 1.6rem;
+}
+.alert-button .button-inner{
+    height: 100%;
+}
+.alert-ios .alert-radio-label{
+    border: 1px solid rgb(240, 240, 240);
+    border-radius: 4px;
+}
+.alert-ios .alert-radio-group{
+    border: none;
+}
+.alert-ios .alert-radio-group, .alert-ios .alert-checkbox-group{
+    max-height: 280px;
+}
+.alert-wrapper{
+    min-width:90%;
+}
+.alert-ios .alert-button{
+    color:color($colors, primary);
+}
+page-loan {
+    color:rgb(60, 60, 60);
+    .toolbar-title-ios{
+        font-size:1.6rem;
+        color:#333;
+    }
+    .header-ios .toolbar-background-ios{
+        border-bottom: 1px solid rgb(240, 240, 240);
+        background:#fff;
+    }
+    
+    .item-ios.item-block .item-inner{
+        border:none;
+    }
+    .horcenter{
+        text-align:center;
+    }
+    .scroll-content{
+        background: rgb(248, 248, 248);
+    }
+    .xmtitle{
+        font-size:1rem;
+        color:#797979;
+        margin-top:5%;
+    }
+    .mRangePos{
+        margin: 0.6rem 0 1rem;
+    }
+    .productrecommend{
+        margin-top:3%;
+        h2{
+            padding:0.3rem 0;
+            font-size:1.25rem;
+            font-weight: 700;
+            
+        }
+        p{
+            font-size: 1rem;
+        }
+        ul{
+            list-style: none;
+            margin: 0 0 0.2rem;
+            overflow: hidden;
+            font-size: 1rem;
+            padding: 0;
+            line-height: 100%;
+            li{
+                padding: 0 4px;
+                float: left;
+                border-right:1px solid rgb(60, 60, 60);
+            }
+            li:last-child{
+                border-right:none;
+            }
+            li:first-child{
+                padding-left:0;
+            }
+        }
+        .redbg{
+            color:color($colors, primary);
+        }        
+    }
+    .remarks{
+        background:#fff;
+        padding: 0 1.3rem;
+        .line{
+            height:0;
+            border-top: 1px solid rgb(240, 240, 240);
+        }
+        .remarksty{
+            font-size: 1rem;
+            color:#797979;
+            line-height: 300%;
+            margin: 0;
+        }
+    }
+    
+}

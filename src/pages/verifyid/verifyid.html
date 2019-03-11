@@ -1,0 +1,29 @@
+<!--
+  Generated template for the VerifyidPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>身份认证</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-padding>
+  <ion-item  class="item">
+    <ion-label fixed>姓名</ion-label>
+    <ion-input type="text" value="" placeholder="请输入持卡人姓名" (input)="verify_code()" [(ngModel)] = "UserName"></ion-input>
+  </ion-item>
+  <ion-item class="item">
+    <ion-label fixed>身份证</ion-label>
+    <ion-input type="text" value="" placeholder="请输入持卡人身份证" (input)="verify_code()" [(ngModel)] = "UserId"></ion-input>
+  </ion-item>
+  <div class="bottom_sub">
+      <button ion-button full class="submit"  [ngClass]="{'add_bkcolor': is_actived == true}" (click)="Submit()" [disabled]="!is_actived">提交</button>
+  </div>
+ 
+</ion-content>

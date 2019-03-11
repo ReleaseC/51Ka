@@ -1,0 +1,49 @@
+<!--
+  Generated template for the HandlecardPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>办卡</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-padding>
+  <div *ngFor="let detail of cardData">
+      <p class="horcenter mdsize">{{detail.title}}</p>
+      <ion-card>
+        <img src="{{detail.imgSrc}}" alt="" class="cardimg">
+        <p class="horcenter mdsize cardtitle">{{detail.title}}</p>
+        <p class="redfont horcenter lgsize">{{detail.slogan}}</p>
+        <ul>
+          <li *ngFor="let point of detail.points" class="smsize">
+            <span class="circle"></span>
+            {{point}}
+          </li>
+        </ul>
+      </ion-card>
+  </div>
+  <p class="horcenter mdsize">更多热门银行，申卡火热进行中</p>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6 *ngFor="let card of moreCards">
+          <ion-card class="smallcard">
+              <img src="{{card.imgSrc}}" alt="" class="smcardimg">
+              <div class="text">
+                <p class=" smsize ">{{card.title}}</p>
+                <p class=" smsize ">{{card.slogan}}</p>
+              </div>
+              <div *ngIf= "card.flag" class="flag">
+                {{card.flag}}
+              </div>
+          </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <p class="horcenter redfont prompt">信用卡申请无需任何费用，谨防电话诈骗</p>
+</ion-content>

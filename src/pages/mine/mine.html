@@ -1,0 +1,78 @@
+
+<ion-header>
+
+  <ion-navbar >
+    <div>我的</div>
+  </ion-navbar>
+  
+</ion-header>
+
+
+<ion-content no-padding>
+<ion-row style="margin-top:0;border:none;padding-top:3%" (click)="ToMineSubPage(0)">
+  <ion-col col-11>
+      <div class="headerimg">
+          <img src="assets/icon/delete/head.PNG">
+      </div>
+      <div class="headertext">
+        <div>
+            <div class="textId lineheight">{{user.mobile}}</div>
+            <div class="lineheight">
+                <img [src]="GetMemberlogo(user.rank)">
+            </div>
+        </div>
+      </div>
+  </ion-col>
+  <ion-col col-1 >
+      <ion-icon name="arrow-forward"></ion-icon>
+  </ion-col>
+</ion-row>
+<ion-row >
+    <button no-lines ion-item class="view-number" (click)="ToMineSubPage(1)"> 
+        <img src="assets/icon/mine/account-vip.png">
+        <div class="minelist" >
+            <div class="mintext">{{user.rank}}</div>
+            <div class="tips">{{PackageDays(user.packageDays)}}</div>
+            <span class="tipright">{{GetRateDetail(user.rank,user.rate)}}</span>
+        </div>
+    </button>  
+</ion-row>
+<ion-row>
+    <button no-lines ion-item class="view-number">
+        <img src="assets/icon/mine/invite-friends.png">
+        <div class="minelist">邀请好友<span>邀请好友拿红包奖励</span></div>
+    </button>    
+</ion-row>
+<ion-row>
+    <button no-lines ion-item class="view-number" (click)="ToMineSubPage(2)" style="border-bottom:1px solid rgb(240,240,240)"> 
+        <img src="assets/icon/mine/gather-records.png">
+        <div class="minelist">收款记录</div>
+    </button>    
+    <button no-lines ion-item class="view-number" (click)="ToMineSubPage(3)"> 
+        <img src="assets/icon/mine/cards.png">
+        <div class="minelist">我的卡片<span>{{CardNumber(user.creditCards,user.depositCards)}}</span></div>
+    </button>   
+</ion-row>
+<ion-row>
+    <button no-lines ion-item class="view-number" (click)="ToMineSubPage(4)"> 
+        <img src="assets/icon/mine/money-back.png">
+        <div class="minelist">抵扣卷<span>有效卷{{user.vouchers}}张</span></div>
+    </button>  
+</ion-row>
+<ion-row>  
+    <button no-lines ion-item class="view-number" (click)="ToMineSubPage(5)"> 
+        <img src="assets/icon/mine/about-us.png">
+        <div class="minelist">返现账户<span>可提现{{user.balance}}元</span></div>
+    </button>   
+</ion-row>
+<ion-row>  
+    <button no-lines ion-item class="view-number" (click)="ToMineSubPage(6)"> 
+        <img src="assets/icon/mine/about-us.png">
+        <div class="minelist">关于</div>
+    </button>   
+</ion-row>
+<ion-row style="margin-top:5%">
+    <div class="loginout" (click)="Logout()">退出登录</div>
+</ion-row>
+
+</ion-content>

@@ -1,0 +1,103 @@
+page-handlecard {
+    .toolbar-background-ios{
+        background:#fff;
+    }
+    .header-ios .toolbar-ios:last-child .toolbar-background-ios{
+        border-bottom: .55px solid #f0f0f0;
+    }
+    .toolbar-title-ios{
+        font-size:1.6rem;
+        color:#333;
+    }
+    ion-navbar{
+        background-color: #fff;
+    }
+    ion-card{
+        border-radius: 10px;
+    }
+    .scroll-content{
+        background: rgb(248, 248, 248);
+        color:rgb(60, 60, 60);
+    }
+    .horcenter{
+        text-align: center;
+    }
+    .redfont{
+        color:color($colors, primary);
+    }
+    .cardimg{
+        border-radius: 3.5%;
+        width:66%;
+        margin:6% 17% 0;
+    }
+    .smsize{
+        font-size: 1rem;
+    }
+    .mdsize{
+        font-size: 1.2rem;
+    }
+    .lgsize{
+        font-size: 1.5rem;
+    }
+    .cardtitle{
+        margin:6% 0 5%;
+        color:rgb(60, 60, 60);
+    }
+    .card-ios{
+        border-radius: 1rem;
+    }
+    .grid{
+        padding: 0 0.5rem
+    }
+    uL,li{
+        padding-left:10px;
+        list-style: none;
+        color: #797979;
+        line-height: 300%;
+        .circle{
+            display:inline-block;
+            width:8px;
+            height:8px;
+            border-radius:50%;
+            background:#666;
+            vertical-align: middle;
+            margin:0 10px 0 0;
+        }
+    }
+    .smallcard{
+        position: relative;
+        overflow: hidden;
+        padding: 1.75rem .83rem;
+        margin: 0;
+        width: 100%;
+        .smcardimg{
+            width:2.85rem;
+            height:2.85rem;
+            float:left;
+        }
+        .text{
+            float:left;
+            margin-left:1.1rem;
+            color: rgb(60, 60, 60);
+        }
+        .flag{
+            position:absolute;
+            right:0;
+            top: 0.5rem;
+            background: url('../assets/imgs/flag.png') no-repeat center center;
+            background-size: 100% 100%;
+            width: 3.2rem;
+            height: 1.3rem;
+            color:#fff;
+            text-align:center;
+            line-height:1.4rem;
+            font-size:0.6rem;
+        }
+    }
+    .prompt{
+        opacity: .8;
+        margin: 2rem 0;
+        font-size:.8rem;
+    }
+    
+}

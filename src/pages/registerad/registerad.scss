@@ -1,0 +1,28 @@
+page-registerad {
+    ion-slide{
+        width: 100%;
+    }
+    ion-row{
+        text-align: center;
+        .button_outer{
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 1.8rem;
+            button{
+                width: 90%;
+                height: 3.4rem;
+                border-radius: 2.3rem;
+                background: color($colors, primary);
+                color:#fff;
+                font-size: 1.6rem;
+                .button-inner {
+                    width: 100%;
+                    height: inherit;
+                    margin: 0 auto 1.6rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+
+<!-- <ion-header>
+
+  <ion-navbar>
+    <ion-title>个人资料</ion-title>
+  </ion-navbar>
+
+</ion-header> -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      个人资料
+    </ion-title>
+    <ion-buttons start style="position: absolute;right: 10px;">
+      <button ion-button (click)="dismiss()" >
+        <span showWhen="ios">关闭</span>
+        <ion-icon name="md-close" showWhen="android,windows,landscape"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content no-padding>
+  
+  <ion-row>
+     <button no-lines ion-item class="view-number" (click)="ToUploadimg()">
+           <div class="left">头像<span class="right"><img [src]="avatarPath"></span></div>
+     </button>    
+    </ion-row>
+    <ion-row>
+      <button no-lines ion-item class="view-number"(click)="ToUpdateNickName()">
+            <div class="left">昵称<span class="right">{{ user.nickName }}</span></div>
+      </button>    
+    </ion-row>
+    <ion-row>   
+      <button no-lines ion-item class="view-number" (click)="changesex()"> 
+            <div class="left">性别<span class="right">{{ user.sex }}</span></div>
+      </button>   
+    </ion-row>
+    <ion-row>   
+      <button no-lines ion-item class="view-number"> 
+            <div class="left">手机号<span class="right">{{ user.mobile }}</span></div>
+      </button>   
+   </ion-row>
+   
+   <button type="button" ion-button block (click)="saveAvatar()" class="save">保 存</button>
+</ion-content>

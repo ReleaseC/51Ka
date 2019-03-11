@@ -1,0 +1,111 @@
+page-mine {
+    .header-ios .toolbar-ios:last-child .toolbar-background-ios {
+        border-width: 0;
+        background: color($colors, primary);
+    }
+    ion-header{
+        ion-icon{
+           font-size: 2.8rem;
+           float: right;
+           padding: 0 3%;
+        }
+        ion-navbar{
+            div{
+                font-size: 1.6rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                color: white;
+            }
+           
+        }
+    }
+    .scroll-content{
+        background: rgb(248, 248, 248);
+    }
+    ion-row{
+        background: white;
+        margin-top: 2%;
+        padding:0 2%;
+        .item-ios {
+            padding-left: 5px;
+        }
+        ion-col{
+            display: flex;
+            align-items: center;
+        }
+        ion-label, button ion-label {
+            pointer-events: none;
+            font-size: 1.4rem;
+        }
+        button{
+            display: flex;
+            font-size: 1.4rem;
+            .minelist{
+                text-align: left;
+                position: relative;
+                margin-top: 1.5%;
+                .mintext{
+                    position: relative;
+                   
+                }
+                .tips{
+                    color: #A1A0A0;
+                    font-size: 1.3rem;
+                }
+                .tipright{
+                    color: color($colors, primary);
+                    position: absolute;
+                    right: 0;
+                    top: 18%;
+                }
+            }
+            span{
+                color:#A1A0A0;
+                font-size: 1.2rem;
+                float: right;
+                margin-top:0.5%;
+            }
+            img{
+                margin:5px 18px 5px 0px;
+                float: left;
+                width: 18px;
+            }
+        }
+        .loginout{
+            padding: 4%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            color: color($colors, primary);
+            font-size: 1.6rem;
+        }
+    }
+    .headerimg{
+        width: 20%;
+        img{//头像图片
+           width: 80%;
+           height: 80%;
+           border-radius: 6px;
+        }
+    }
+    .headertext{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .textId{
+            display: inline-flex;
+            font-size: 1.6rem;
+            white-space: nowrap;
+            align-items: center;
+        }
+        .lineheight{
+            padding: 2.5%;
+            img{//钻石会员图片
+                width: 5.5rem;
+            }
+        }
+    }
+}

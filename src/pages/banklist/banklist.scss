@@ -1,0 +1,25 @@
+page-banklist {
+    .button-inner{
+        margin: 0 auto;
+    }
+    .scroll-content{
+        background: #f8f8f8;
+    }
+    .bank_img{
+        vertical-align: middle;
+        width: 3rem;
+    }
+    .bank_name{
+        padding-left: 1rem;
+        font-size: 1.4rem;
+    }
+    ion-label{
+        color: #333;
+    }
+    .item-radio-checked.item-ios ion-label{
+        color: color($colors, primary);
+    }
+    .radio-ios .radio-checked .radio-inner{
+        border-color: color($colors, primary);
+    }
+}

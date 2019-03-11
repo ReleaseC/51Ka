@@ -1,0 +1,47 @@
+<!--
+  Generated template for the LoanPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>借贷</ion-title>
+  </ion-navbar>
+  <ion-toolbar>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6>
+            <div class="horcenter" (click)="showMoney()">{{moneyRang}} <ion-icon name="arrow-down"></ion-icon></div>
+          </ion-col>
+          <ion-col col-6>
+            <div class="horcenter" (click)="showTime()">{{timeRang}} <ion-icon name="arrow-down"></ion-icon></div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  </ion-toolbar>
+</ion-header>
+  
+
+<ion-content no-padding>
+  <p class="horcenter xmtitle">已为您精准推荐<span>12</span>款产品</p>
+  <div  *ngFor="let detail of productsData">
+    <ion-item class="productrecommend">
+      <ion-thumbnail item-start>
+        <img src="{{detail.imgSrc}}">
+      </ion-thumbnail>
+      <h2>{{detail.title}}</h2>
+      <p class="mRangePos">可贷金额<span class="redbg">{{detail.moneyRange}}</span></p>
+      <ul>
+        <li><span class="redbg">{{detail.time}}</span>放贷</li>
+        <li>日息<span class="redbg">{{detail.interest}}</span></li>
+        <li>可借<span class="redbg">{{detail.date}}</span></li>
+      </ul>
+    </ion-item>
+    <div class="remarks">
+      <div class="line"></div>
+      <p class="remarksty">{{detail.remark}}</p>
+    </div>  
+  </div>
+</ion-content>

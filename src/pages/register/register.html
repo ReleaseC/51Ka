@@ -1,0 +1,44 @@
+<ion-content no-padding >
+  <div *ngIf = "regIndex == 0">
+    <ion-row class="top">
+        <ion-col>注册</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="padding:16% 10%">
+        <img src="assets/icon/delete/logo.PNG" width="75px">
+      </ion-col>
+    </ion-row>
+    <div class="inputouter inputauto" overflow-scroll: true>
+      <ion-input class=" " style="user-select: auto" type="text" value="" placeholder="请输入手机号" [(ngModel)]="myTel" overflow-scroll="true">
+        <span class=""></span>
+      </ion-input>
+    </div>
+    <div class="inputouter inputauto">
+      <ion-input type="text" class="inputauto" placeholder="请输入验证码" maxlength="6"  [(ngModel)]="myCode" ></ion-input>
+      <div class="authcode" (click)="GetAuthCode()" *ngIf="authflag == 0">{{valid_text}}</div>
+      <div class="authcode send" *ngIf="authflag == 1">已发送( {{valid_num}} )</div>
+    </div>
+    <div class="rebtn">
+      <button (click)="ToNext()">下一步</button>     
+    </div>
+    <div class="register-text">点击"下一步"即表示您同意<span>《51卡宝用户使用协议》</span></div>  
+  </div>
+  <div *ngIf = "regIndex == 1">
+      <ion-row class="top">
+          <ion-icon name="ios-arrow-back-outline" (click)="Back()"></ion-icon>
+          <ion-col>设置密码</ion-col>
+      </ion-row>
+      <div class="tips">*密码长度请保持在6-22位范围内</div>
+      <div class="inputouter">
+          <ion-input type="password" value="" placeholder="输入密码" [(ngModel)]="myPassWord" (input)="Check()"></ion-input>
+      </div>
+      <div class="inputouter">
+          <ion-input type="password" value="" placeholder="再次确认" [(ngModel)]="CheckmyPassWord" (input)="Check()"></ion-input>
+      </div>
+      <div class="rebtn">
+          <button (click)="ToResgister()"  [disabled]="!regbtnFlag">注册</button>     
+      </div>
+      <div class="register-text"><span>欢迎58金融产品，服务热线电话18888888888</span></div>  
+  </div>
+</ion-content>
+    

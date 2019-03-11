@@ -1,0 +1,61 @@
+page-verifyid {
+    .item {
+        border-bottom: 1px solid rgb(240,240,240);
+        font-size: 1.5rem;
+        padding-left: 3%;
+        ion-label {
+            width: 50px;
+        }
+        ion-label[fixed] {
+            -webkit-box-flex: 0;
+            -webkit-flex: 0 0 100px;
+            -ms-flex: 0 0 100px;
+            flex: 0 0 100px;
+            width: 50px;
+            min-width: 50px;
+            max-width: 50px;
+        }
+    }
+    .scroll-content{
+        background: rgb(248, 248, 248);
+    }
+    .item-ios.item-block .item-inner {
+        padding-right: 8px;
+        padding-right: 8px;
+        border: none;
+    }
+    .bottom_sub{
+        padding: 3%;
+        margin-top: 10%;
+        .add_bkcolor{
+            background: color($colors, primary);
+        }
+    }
+    .submit{
+        border-radius: 4px;
+        background: color($colors, primary);
+        color: #fff;
+    }
+    .button-inner{
+        margin: 0 auto;
+        
+    }
+    .button-ios.activated{
+        background: #fff;
+        color: color($colors, primary);
+        border: 1px solid color($colors, primary);
+    }
+    .toolbar-background-ios{
+        background: #fff;
+    }
+    .toolbar-title-ios{
+        font-weight: 400;
+        font-size: 1.6rem;
+    }
+    .back-button-icon-ios{
+        font-size: 2rem;
+    }
+    .bar-button-default-ios{
+        color: #666;
+    }
+}

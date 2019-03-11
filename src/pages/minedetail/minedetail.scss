@@ -1,0 +1,51 @@
+page-minedetail {
+    ion-header{
+        .button-inner {
+            width: 80%;
+            height: inherit;
+            margin: 0 auto;
+        }
+        .bar-button-default-ios{
+            color:#3c3c3c; 
+        }
+        .back-button-icon-ios{
+            font-size:2rem;
+        }
+        .toolbar-background-ios{
+            background:#fff;
+        }
+    }
+    ion-content{
+        .save {
+            width: 95%;
+            margin: 2% auto;
+            background:linear-gradient(to right, color($colors, light-primary), color($colors, primary));
+            border-radius:2.3rem;
+        }
+        .button-inner {
+            width: 80%;
+            height: inherit;
+            margin: 0 auto 1.6rem;
+        }
+        ion-row{
+            border-bottom: 1px solid rgb(240, 240, 240);
+        }
+        .scroll-content{
+            background: rgb(248, 248, 248);
+        }
+        .left{
+            font-size: 1.3rem;
+        }
+        .right{
+            float: right;
+            color:#717171;
+        }
+        img{
+            width: 32px;
+            height: 30px;
+            position:absolute;
+            right: 11%;
+            top:22%;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-row>
+    <ion-col col-4 style="text-align:left" (click)="Back()">取消</ion-col>
+    <ion-col col-4>昵称</ion-col>
+    <ion-col col-4 class="right" style="text-align:right" (click)="BackSave()">保存</ion-col>
+  </ion-row>
+</ion-header>
+
+<ion-content no-padding>
+    <div class="inputouter">
+        <ion-input type="text" placeholder="输入昵称" [(ngModel)]= "nickname"></ion-input>
+    </div>
+</ion-content>

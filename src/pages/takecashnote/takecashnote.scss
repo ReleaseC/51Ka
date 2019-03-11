@@ -1,0 +1,81 @@
+page-takecashnote {
+    .toolbar-title-ios{
+        font-size:1.6rem;
+        color:#333;
+    }
+    .back-button-icon-ios{
+        font-size:2rem;
+    }
+    .bar-button-default-ios, .bar-button-default.bar-button-ios-default, .bar-button-clear-ios-default{
+        color:rgb(60, 60, 60);
+    }
+    .button-inner{
+        margin:0 auto;
+    }
+    .scroll-content{
+        background: rgb(248, 248, 248);
+    }
+    .list-header-ios{
+        color:#797979;
+    }
+    .fr{
+        float:right;
+    }
+    .clearfix{
+        overflow:hidden;
+    }
+    .title{
+        font-size:1.5rem;
+        line-height:1.5;
+        font-weight: 700;
+        color:rgb(60, 60, 60);
+    }
+    .describe{
+        font-size:1.2rem;
+        line-height:1.2;
+    }
+    .list-ios{
+        margin-bottom:1rem;
+    }
+    ion-list:last-child{
+        margin-bottom:3rem;
+    }
+    .card_icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+    }
+    .item-ios ion-icon[item-start]{
+        margin: 0 auto;
+    }
+    .amount{
+        font-size: 1.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #333;
+    }
+    .list_item{
+        position: relative;
+    }
+    .finish_flag{
+        border: 1px solid red;
+        border-radius: 4px;
+        color: red;
+        text-align: center;
+        width: 5rem;
+        height: 2rem;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        transform: rotate(-30deg);
+        position: absolute;
+        left: 55%;
+        top: 30%;
+        z-index: 10;
+        display: none;
+    }
+    .show{
+        display: block;
+    }
+}

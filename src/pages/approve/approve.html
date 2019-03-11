@@ -1,0 +1,22 @@
+<!--
+  Generated template for the ApprovePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content no-padding>
+    <ion-list class="inputs">
+      <ion-item>
+        <ion-label fixed>姓名</ion-label>
+        <ion-input type="text" placeholder="请输入持卡人姓名" [(ngModel)]="name" (input)="verify_code()"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>身份证</ion-label>
+        <ion-input type="text" placeholder="请输入持卡人身份证" maxlength="20" minlenght="18" [(ngModel)]="idnumber" (input)="verify_code()"></ion-input>
+      </ion-item>
+    </ion-list>
+    <div class="submit_box">
+      <button ion-button full class="submit" (click)="submit()" [ngClass]="{'add_btnbk':isActived}" [disabled]="!isActived">提交</button>
+    </div>
+    
+</ion-content>

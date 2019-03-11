@@ -1,0 +1,36 @@
+<!--
+  Generated template for the AboutPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>关于</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content no-padding>
+    <ion-row>
+      <button no-lines ion-item class="view-number" (click)="aboutUs()">
+        <div class="left">关于我们<span class="right"></span></div>
+      </button>    
+    </ion-row>
+    <ion-row>   
+      <button no-lines ion-item class="view-number" (click)="feedback()"> 
+        <div class="left">用户反馈<span class="right"></span></div>
+      </button>   
+    </ion-row>
+    <ion-row>   
+      <button no-lines ion-item class="view-number" (click)="resetPassword()"> 
+        <div class="left">重置登录密码<span class="right"></span></div>
+      </button>   
+   </ion-row>
+   <ion-row>   
+      <div class="noarrow">
+        <div class="left">版本信息<span class="right">v1.0.0</span></div>
+      </div> 
+   </ion-row>
+</ion-content>

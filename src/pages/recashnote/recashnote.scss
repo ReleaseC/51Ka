@@ -1,0 +1,81 @@
+page-recashnote {
+    .toolbar-title-ios{
+        font-size:1.6rem;
+        color:#333;
+    }
+    ion-navbar .toolbar-background-ios{
+        background-color:#fff;
+    }
+    ion-toolbar .toolbar-background-ios{
+        background-color: color($colors, primary);
+    }
+    ion-toolbar p{
+        text-align:center;
+        color:#fff;
+    }
+    ion-toolbar{
+        text-align: center;
+    }
+    .back-button-icon-ios{
+        font-size: 2rem;
+    }
+    .bar-button-default-ios, .bar-button-default.bar-button-ios-default, .bar-button-clear-ios-default{
+        color:rgb(60, 60, 60);
+    }
+    .suplgfont{
+        font-size:2.2rem;
+    }
+    .smfont{
+        font-size:1.2rem;
+    }
+    .mlfont{
+        font-size:1.4rem;
+    }
+    .opacfont{
+        opacity: .8;
+    }
+    .recashbtn{
+        background-color: color($colors, primary);
+        border:1px solid rgb(240, 240, 240);
+        color:rgb(240, 240, 240);
+    }
+    .button-inner{
+        margin: 0 auto;
+    }
+    .button-ios{
+        margin: 0 0 1.6rem;
+    }
+    .redblock{
+        display:inline-block;
+        width:.3rem;
+        height:1.8rem;
+        background-color: color($colors, primary);
+        vertical-align: middle;
+    }
+    .recashtitle{
+        height:5rem;
+        border-bottom:1px solid rgb(240, 240, 240);
+        padding: .9rem 1rem;
+    }
+    .titname{
+        display:inline-block;
+        line-height: 160%;
+    }
+    .fr{
+        float:right;
+    }
+    .clearfix{
+        overflow:hidden;
+    }
+    .titlname{
+        font-size:1.17rem;
+        line-height:200%;
+        font-weight: 700;
+        color:rgb(60, 60, 60);
+    }
+    .describe{
+        font-size:0.75rem;
+        line-height:160%;
+        color: #797979
+    }
+}

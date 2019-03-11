@@ -1,0 +1,24 @@
+page-feedback {
+    .button-inner{
+        margin: 0 auto;
+    }
+    .text{
+        height: 200px;
+        border: 1px solid #ccc;
+        padding: 0 0 0 1.2rem;
+        color: #333;
+    }
+    .text-input-ios{
+        margin-right: 0;
+    }
+    .no-submit{
+        margin-top: 20%;
+        background: #666;
+    }
+    .submit{
+        background: color($colors, primary);
+        &.activated{
+            background: color($colors, primary);
+        }
+    }
+}

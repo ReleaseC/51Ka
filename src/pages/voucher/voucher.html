@@ -1,0 +1,18 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>我的抵扣卷</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-padding>
+    <div class="demo">
+      <div class="stamp" *ngFor="let item of Vouchers; let i = index" [ngClass] = "VoucherClass(i)">
+        <div class="par"><p>{{item.source}}</p><sub class="sign">￥</sub><span>{{item.amount}}</span><sub>优惠券</sub><p>{{item.name}}</p></div>
+        <div class="copy">副券<p>2017-07-14<br>{{item.expireDate}}</p></div>
+        <i></i>
+      </div>
+    </div>         
+</ion-content>

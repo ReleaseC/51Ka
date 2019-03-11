@@ -1,0 +1,37 @@
+
+<ion-content no-padding>
+    <div class="header">
+        <div *ngFor = "let item of titlelist" (click)="Changetop(item)" [ngClass]="{ addselect :item.nownum == 1 }">{{item.title}}
+            <span></span>
+        </div>
+    </div>
+  
+    <div *ngFor = "let card of cardlist">
+        <div *ngIf = "cardtype == card.type" >
+            <div class="cardouter">
+                <div class="card">
+                    <img [src]="card.src" width="35px">
+                    <div class="cardtext">
+                    <div>{{card.bank}}</div>
+                    <div class="num">{{GetCardNo(card.cardNo)}}</div>
+                    </div>
+                    <ion-icon name="ios-trash-outline" (click)="DelBank(card.id)"></ion-icon>
+                </div>
+                <div class="cardfooter">
+                    <span>{{card.accountName}}</span>
+                    <span class="main_card">
+                        <input type="radio" [checked]="card.primary == 1" (click)="setPrimary(card)">
+                        <span class="radio_text" >设为主卡</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="addcard" *ngIf = "cardtype == 0" (click)="AddCresitcard()">
+        +添加信用卡
+    </div>
+    <div class="addcard" *ngIf = "cardtype == 1" (click)="AddDepositcard()">
+        +添加储蓄卡
+    </div>
+</ion-content>

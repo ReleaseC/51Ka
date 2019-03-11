@@ -1,0 +1,114 @@
+page-adddepositcard {
+    .alert-wrapper .alert-ios .alert-button{
+        color: color($colors, primary);
+    }
+    .toolbar-background-ios{
+        background: color($colors, primary);
+    }
+    .toolbar-title-ios{
+        font-weight:400;
+        color:#fff;
+        font-size:1.5rem;
+    }
+    .header-ios .toolbar-ios:last-child .toolbar-background-ios{
+        border:none;
+    }
+    .button-inner{
+        margin: 0 auto;
+    }
+    .bar-button-default-ios{
+        color:#fff;
+    }
+    .back-button-icon-ios{
+        font-size:2rem;
+    }
+    .scroll-content{
+        background:rgb(248, 248, 248);
+    }
+    .remindword{
+       padding:12px 16px 8px;
+       margin: 0;
+       font-size: 1rem;
+       color:#999;
+       line-height:1.5rem;
+    }
+    .list-ios > .item-block:first-child{
+        border:none;
+    }
+    .list-ios > .item-block:last-child{
+        border: none;
+    }
+    .list-ios .item-block .item-inner{
+        border-bottom-color: #d9d9d9;
+    }
+    ion-label{
+        font-size:1.3rem;
+        color:rgb(10, 10, 10); 
+    }
+    input{
+        font-size: 1.3rem;
+        color:#333;
+        font-family: "microsoft yahei"
+    }
+    .button-outline-ios{
+        color: color($colors, primary);
+        border-color:  color($colors, primary);
+    }
+    .button-outline-ios.activated{
+        background-color: color($colors, primary);
+    }
+    .save_btn{
+        width: 91%;
+        text-align: center;
+        margin: 0 auto;
+        button.add_bk{
+            background:linear-gradient(to right, color($colors, light-primary), color($colors, primary));
+        }
+        button{
+            background: #ccc;
+        }
+    }
+    .alert-ios [aria-checked=true] .alert-radio-label{
+        background-color:green
+    }
+    .forrela{
+        position: relative;
+    }
+    ion-select{
+        position: absolute;
+        left:124px;
+        font-size:1.3rem;
+    }
+    .select-ios .select-icon .select-icon-inner{
+        border: none;
+    }
+    .right_icon{
+        width:2rem;
+        height:2rem;
+        position: absolute;
+        right:.4rem;
+        top:50%;
+        margin-top:-1rem;
+        background:url('../assets/imgs/right_icon.png') center center no-repeat;
+        background-size: 100% 100%;
+    }
+    ion-label[fixed]{
+        flex: 0 0 6rem;
+        width: 6rem;
+        min-width: 6rem;
+        max-width: 6rem;
+    }
+    
+    .search_btn{
+        background: #fff;
+        color: #ccc;
+        &.activated{
+            background: #fff
+        }
+    }
+    
+    .bank_name{
+        width: 92px;
+        display: inline-block
+    }
+}

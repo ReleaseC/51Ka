@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>刷卡收款</ion-title>
+    <ion-icon name="help-circle-outline"></ion-icon>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding>
+  <div class="addcards">
+    <div style="border-top: 1px solid rgb(240, 240, 240);" class="bindcard">
+      付款信用卡
+      <div *ngIf="isAddCard1; then showCard1 else addCard1"></div>
+      <ng-template #showCard1>
+        <span class="bank_name">
+          <img src="assets/imgs/account.png" alt="" class="bank_logo">
+          {{paycard}}
+        </span>
+        <span class="change_card" (click)="changeCard(0)">
+          更换
+        </span>
+      </ng-template>
+      <ng-template #addCard1>
+        <ion-icon name="ios-add-circle-outline" (click)="toAddCreditCard()">
+          <span>添加信用卡</span>
+        </ion-icon>
+      </ng-template>
+    </div>
+    <div style="margin-top:0" class="bindcard">
+      收款储蓄卡
+      <div *ngIf="isAddCard2; then showCard2 else addCard2"></div>
+      <ng-template #showCard2>
+        <span class="bank_name">
+          <img src="assets/imgs/account.png" alt="" class="bank_logo">
+          {{comecard}}
+        </span>
+        <span class="change_card" (click)="changeCard(1)">
+          更换
+        </span>
+      </ng-template>
+      
+      <ng-template #addCard2>
+        <ion-icon name="ios-add-circle-outline" (click)="toAddDepositCard()">
+          <span>添加储蓄卡</span>
+        </ion-icon>
+      </ng-template>
+    </div>
+  </div>
+  
+  <ion-row class="cash_text" style="padding-bottom:0">
+    <div class="cash_title">取现金额</div>
+    <div class="cash_input">
+       <span>￥</span>
+       <ion-input type="number" value="" placeholder="10000.00" [(ngModel)]="amount"></ion-input>
+    </div>
+    <div class="tips">费率{{discount}}%，立即到账</div>
+  </ion-row>
+  <div class="next_btn">
+    <button ion-button (click)="PayNext()" [ngClass]="{'add_btnbk':isActived}" [disabled]="!isActived">下一步</button>
+  </div>
+  <div class="advertisement" *ngIf="isAddCard">
+    <ion-row>
+      <ion-col col-4 class="ad_img">
+        <img src="assets/imgs/gather-member.png" alt="">
+      </ion-col>
+      <ion-col col-8 class="ad_content">
+        <div class="vercenter">
+          <p class="ad_cont_top">办理会员享超低费率</p>
+          <p class="ad_cont_ml">0.40%-0.45%</p>
+          <p class="ad_cont_btm">本次交易可节省<span class="redfont">5-10</span>元</p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
